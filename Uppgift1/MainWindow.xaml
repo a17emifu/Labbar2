@@ -1,0 +1,46 @@
+﻿<Window x:Class="Uppgift1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uppgift1"
+        mc:Ignorable="d"
+        Title="Godisfördelaren" Height="450" Width="800">
+    <Grid>
+        <Label Content="Förnamn" HorizontalAlignment="Left" Margin="126,67,0,0" VerticalAlignment="Top"/>
+        <Label Content="Efternamn" HorizontalAlignment="Left" Margin="124,94,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ålder" HorizontalAlignment="Left" Margin="126,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.346"/>
+        <Label Content="Personer" HorizontalAlignment="Left" Margin="127,180,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.526,-0.923"/>
+
+        <TextBox x:Name="boxFirstName" HorizontalAlignment="Left" Height="23" Margin="188,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" />
+        <TextBox x:Name="boxlastName" HorizontalAlignment="Left" Height="23" Margin="188,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
+        <TextBox x:Name="boxAge" HorizontalAlignment="Left" Height="23" Margin="188,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
+        <Button x:Name="btnAdd" Content="Lägg till" HorizontalAlignment="Left" Margin="298,152,0,0" VerticalAlignment="Top" Width="75" Click="btnAdd_Click"/>
+        <ListBox x:Name="listboxPersons" HorizontalAlignment="Left" Height="142" Margin="188,180,0,0" VerticalAlignment="Top" Width="185"/>
+
+        <Rectangle Margin="376,69,217,167" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                    <GradientStop Color="LightBlue" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="btnDiv" Content="Fördela&#xD;&#xA; i inmatningsordning" HorizontalAlignment="Left" Margin="402,152,0,0" VerticalAlignment="Top" Width="120" Click="btnDiv_Click" Height="37"/>
+        <Label Content="Antal godisar att fördela" HorizontalAlignment="Left" Margin="402,94,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="boxCandy" HorizontalAlignment="Left" Height="23" Margin="402,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSort" Content="Fördela efter ålder" HorizontalAlignment="Left" Margin="402,194,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+        <Button x:Name="btntest" Content="Ladda filen" HorizontalAlignment="Left" Margin="402,302,0,0" VerticalAlignment="Top" Width="120" Click="btntest_Click"/>
+        <Button Content="Spara" HorizontalAlignment="Left" Margin="402,277,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_1"/>
+        <Button Content="Rensa" HorizontalAlignment="Left" Margin="298,327,0,0" VerticalAlignment="Top" Width="75" Background="#FFFFFCFC" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>
